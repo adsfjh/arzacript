@@ -10,7 +10,7 @@
 
 
 
-window.button_id = 0;  
+window.button_id = 0;
 
 window.active_old = 0;
 
@@ -92,12 +92,12 @@ window.button_id++;
 
 function addbtnscript(titl, text) {
 
+  $('div.fr-element.fr-view').empty();
 buttonsh_add(titl, text );
 }
 
 
 $(document).ready(function() {
-$(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br>");
+$(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br>Закрыто.[/FONT][/CENTER]");
 });
-
 
