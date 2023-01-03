@@ -10,7 +10,7 @@
 
 
 
-window.button_id = 0;   // я негр
+window.button_id = 0;  
 
 window.active_old = 0;
 
