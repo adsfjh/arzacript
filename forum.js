@@ -3,10 +3,12 @@
 // @namespace   arzmesa
 // @match       https://forum.arizona-rp.com/*
 // @grant       none
-// @version     1.2.6
+// @version     1.2.7
 // @author      1clyde
 // @description teh
 // ==/UserScript==
+
+
 
 window.button_id = 0;
 
@@ -92,5 +94,10 @@ function addbtnscript(titl, text) {
 
 buttonsh_add(titl, text );
 }
+
+
+$(document).ready(function() {
+$(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br><br>Закрыто[/FONT][/CENTER]");
+});
 
 
