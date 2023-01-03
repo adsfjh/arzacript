@@ -97,7 +97,7 @@ buttonsh_add(titl, text );
 
 
 $(document).ready(function() {
-$(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br><br>Закрыто[/FONT][/CENTER]");
+$(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br>Закрыто[/FONT][/CENTER]");
 });
 
 
