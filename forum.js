@@ -23,8 +23,8 @@ $('.button--icon--reply').after(button_shabs);
 
 $(document).ready(function () {
 
-$("button#shabs.button.shabs.rippleButton").click(function() {
-
+let shabsBtn = document.getElementById("shabs");
+shabsBtn.addEventListener("click", function() {
 $('div.overlay-container').remove()
 
 XF.alert(`<div id="shabscontent"></div>`, "Выберите ответ");
