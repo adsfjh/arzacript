@@ -92,8 +92,6 @@ $("a.overlay-titleCloser").trigger('click')
 
 window.button_id++;
 
-}
-
 function addbtnscript(titl, text) {
 $('div.fr-element.fr-view').empty();
 buttonsh_add(titl, text);
