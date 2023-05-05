@@ -94,6 +94,7 @@ window.button_id++;
 
 }
 
-window.addEventListener('load', function() {
-$(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br>Закрыто.[/FONT][/CENTER]");
-});
+function addbtnscript(titl, text) {
+$('div.fr-element.fr-view').empty();
+buttonsh_add(titl, text);
+}
