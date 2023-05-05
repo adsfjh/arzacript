@@ -3,7 +3,7 @@
 // @namespace   arzmesa
 // @match       https://forum.arizona-rp.com/*
 // @grant       none
-// @version     1.2.334
+// @version     1.2.335
 // @author      1clyde
 // @description teh
 // ==/UserScript==
@@ -91,6 +91,8 @@ $("a.overlay-titleCloser").trigger('click')
 })
 
 window.button_id++;
+
+}
 
 function addbtnscript(titl, text) {
 $('div.fr-element.fr-view').empty();
