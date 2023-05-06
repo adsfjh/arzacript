@@ -3,11 +3,11 @@
 // @namespace   arzmesa
 // @match       https://forum.arizona-rp.com/*
 // @grant       none
-// @version     2
+// @version     2 
 // @author      1clyde
 // @description teh
 // ==/UserScript==
-
+// в версии меняйте чисто версию (2->3 и т.д), нет смысла в дробях
 
 
 window.button_id = 0;
