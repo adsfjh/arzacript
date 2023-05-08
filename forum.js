@@ -3,7 +3,7 @@
 // @namespace   arzmesa
 // @match       https://forum.arizona-rp.com/*
 // @grant       none
-// @version     2 
+// @version     3
 // @author      1clyde
 // @description teh
 // ==/UserScript==
@@ -56,6 +56,7 @@ addbtnscript('дайте реги','[CENTER][COLOR=rgb(239, 239, 239)][FONT=treb
 addbtnscript('приложите вход с ВК',"Приветствую<br>Приложите видео как входите через ВК в личный кабинет на сайте https://arizona-rp.com/login/, под красной кнопкой 'Войти' нужно нажать 'Войти через ВКонтакте' и выбрать ваш аккаунт<br>Ссылку на видео лучше вставить в скрытый блок [IMG]https://i.imgur.com/RJjIWU8.png[/IMG]");
 addbtnscript('объект вернется 2-3 дня',"Приветствую.<br>Подождите 2-4 дня, зачастую объект возвращается сам на место установки.<br>Если объект не вернулся спустя указанный период времени - пересоздайте жалобу указав в ней ссылку на эту.<br>Закрыто.");
 addbtnscript('теч вк и тг',"Приветствую.<br>Отпишите в Телеграмм https://t.me/techmesa или группу ВК https://vk.com/techmesa");
+addbtnscript('донат на фейк сайт',"[CENTER][COLOR=rgb(239, 239, 239)][FONT=trebuchet ms][SIZE=3]Приветствую,<br> Закинули деньги на фейковый фишинг сайт. Официальный сайт проекта - https://arizona-rp.com/<br>Закрыто.[/FONT][/CENTER]");
 //тут конец ответов
 
 });
