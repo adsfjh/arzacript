@@ -3,7 +3,7 @@
 // @namespace   arzmesa
 // @match       https://forum.arizona-rp.com/*
 // @grant       none
-// @version     10
+// @version     11
 // @author      1clyde
 // @description teh
 // ==/UserScript==
