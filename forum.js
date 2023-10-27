@@ -105,3 +105,193 @@ window.addEventListener('load', function() {
 $(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br>Закрыто.[/FONT][/CENTER]");
 });
 
+
+
+window.button_id = 0;
+
+var button =  '<input type="button" class="button shabs" value="ожидание" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_wait()"> ';
+$('.button--icon--reply').before(button);
+
+var button =  '<input type="button" class="button shabs" value="на рассм" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_narasm()"> ';
+$('.button--icon--reply').before(button);
+
+var button =  '<input type="button" class="button shabs" value="рассмотрено" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_closerassm()"> ';
+$('.button--icon--reply').before(button);
+
+var button =  '<input type="button" class="button shabs" value="отказ" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_closeoktaz()"> ';
+$('.button--icon--reply').before(button);
+
+var button =  '<input type="button" class="button shabs" value="обр" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_obrabotka()"> ';
+$('.button--icon--reply').before(button);
+
+
+
+
+$('.button--icon--preview').after('<br><br>');
+
+
+// Закреп+префикс ожидание
+function button_wait(){
+  var str = $('div.fr-element.fr-view').text();
+ if (str.length > 0){
+        $(".button--icon--reply").trigger('click');
+ }
+
+if (document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0]){
+        document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0].remove();
+}
+ post(document.getElementsByClassName("menu-linkRow")[14].href, {
+"prefix_id": "40",
+"title": document.getElementsByClassName('p-title-value')[0].textContent,
+"discussion_open": "1",
+"_xfSet[discussion_open]": "1",
+"sticky": "1",
+"_xfSet[sticky]": "1",
+"_xfToken": document.getElementsByName('_xfToken')[0].value,
+"_xfRequestUri": document.getElementsByClassName("menu-linkRow")[14].href,
+"_xfWithData": "1",
+"_xfResponseType": "html",
+});
+}
+
+// Закреп+префикс на рассм
+function button_narasm(){
+  var str = $('div.fr-element.fr-view').text();
+ if (str.length > 0){
+        $(".button--icon--reply").trigger('click');
+ }
+
+if (document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0]){
+        document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0].remove();
+}
+ post(document.getElementsByClassName("menu-linkRow")[14].href, {
+"prefix_id": "15",
+"title": document.getElementsByClassName('p-title-value')[0].textContent,
+"discussion_open": "1",
+"_xfSet[discussion_open]": "1",
+"sticky": "1",
+"_xfSet[sticky]": "1",
+"_xfToken": document.getElementsByName('_xfToken')[0].value,
+"_xfRequestUri": document.getElementsByClassName("menu-linkRow")[14].href,
+"_xfWithData": "1",
+"_xfResponseType": "html",
+});
+}
+
+// Закрыть+рассмотрено
+function button_closerassm(){
+  var str = $('div.fr-element.fr-view').text();
+ if (str.length > 0){
+        $(".button--icon--reply").trigger('click');
+ }
+
+if (document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0]){
+        document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0].remove();
+}
+ post(document.getElementsByClassName("menu-linkRow")[14].href, {
+"prefix_id": "17",
+"title": document.getElementsByClassName('p-title-value')[0].textContent,
+"discussion_open": "0",
+"_xfSet[discussion_open]": "0",
+"sticky": "0",
+"_xfSet[sticky]": "0",
+"_xfToken": document.getElementsByName('_xfToken')[0].value,
+"_xfRequestUri": document.getElementsByClassName("menu-linkRow")[14].href,
+"_xfWithData": "1",
+"_xfResponseType": "html",
+});
+}
+
+// Закрыть+отказано
+function button_closeoktaz(){
+  var str = $('div.fr-element.fr-view').text();
+ if (str.length > 0){
+        $(".button--icon--reply").trigger('click');
+ }
+
+if (document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0]){
+        document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0].remove();
+}
+ post(document.getElementsByClassName("menu-linkRow")[14].href, {
+"prefix_id": "18",
+"title": document.getElementsByClassName('p-title-value')[0].textContent,
+"discussion_open": "0",
+"_xfSet[discussion_open]": "0",
+"sticky": "0",
+"_xfSet[sticky]": "0",
+"_xfToken": document.getElementsByName('_xfToken')[0].value,
+"_xfRequestUri": document.getElementsByClassName("menu-linkRow")[14].href,
+"_xfWithData": "1",
+"_xfResponseType": "html",
+});
+}
+
+// обрабатывается
+function button_obrabotka(){
+  var str = $('div.fr-element.fr-view').text();
+ if (str.length > 0){
+        $(".button--icon--reply").trigger('click');
+ }
+
+if (document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0]){
+        document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0].remove();
+}
+ post(document.getElementsByClassName("menu-linkRow")[14].href, {
+"prefix_id": "36",
+"title": document.getElementsByClassName('p-title-value')[0].textContent,
+"discussion_open": "0",
+"_xfSet[discussion_open]": "0",
+"sticky": "0",
+"_xfSet[sticky]": "0",
+"_xfToken": document.getElementsByName('_xfToken')[0].value,
+"_xfRequestUri": document.getElementsByClassName("menu-linkRow")[14].href,
+"_xfWithData": "1",
+"_xfResponseType": "html",
+});
+}
+
+// на обработке
+function button_obrabotkat(){
+  var str = $('div.fr-element.fr-view').text();
+ if (str.length > 0){
+        $(".button--icon--reply").trigger('click');
+ }
+
+if (document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0]){
+        document.getElementsByClassName('p-title-value')[0].getElementsByTagName('span')[0].remove();
+}
+ post(document.getElementsByClassName("menu-linkRow")[14].href, {
+"prefix_id": "39",
+"title": document.getElementsByClassName('p-title-value')[0].textContent,
+"discussion_open": "0",
+"_xfSet[discussion_open]": "0",
+"sticky": "0",
+"_xfSet[sticky]": "0",
+"_xfToken": document.getElementsByName('_xfToken')[0].value,
+"_xfRequestUri": document.getElementsByClassName("menu-linkRow")[14].href,
+"_xfWithData": "1",
+"_xfResponseType": "html",
+});
+}
+
+
+function post(path, params, method='post') {
+  const form = document.createElement('form');
+  form.method = method;
+  form.action = path;
+
+  for (const key in params) {
+    if (params.hasOwnProperty(key)) {
+      const hiddenField = document.createElement('input');
+      hiddenField.type = 'hidden';
+      hiddenField.name = key;
+      hiddenField.value = params[key];
+
+      form.appendChild(hiddenField);
+    }
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+}
+
