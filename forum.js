@@ -107,26 +107,5 @@ $(".fr-view").html("[CENTER][FONT=verdana]Приветствую.<br><br>Зак�
 
 
 
-window.button_id = 0;
-
-var button =  '<input type="button" class="button shabs" value="ожидание" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_wait()"> ';
-$('.button--icon--reply').before(button);
-
-var button =  '<input type="button" class="button shabs" value="на рассм" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_narasm()"> ';
-$('.button--icon--reply').before(button);
-
-var button =  '<input type="button" class="button shabs" value="рассмотрено" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_closerassm()"> ';
-$('.button--icon--reply').before(button);
-
-var button =  '<input type="button" class="button shabs" value="отказ" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_closeoktaz()"> ';
-$('.button--icon--reply').before(button);
-
-var button =  '<input type="button" class="button shabs" value="обр" id="close" style="margin-top: 3px; margin-left: 3px;" onClick="button_obrabotka()"> ';
-$('.button--icon--reply').before(button);
-
-
-
-
-$('.button--icon--preview').after('<br><br>');
 
 
