@@ -1,0 +1,50 @@
+<?php
+// Разрешаем доступ с любых источников
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
+// Разрешаем использование определенных методов
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+
+// Разрешаем отправку дополнительных заголовков в запросе
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+$hostname = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'gerstlix_id';
+
+// PDO connection
+try {
+    $_DB = new PDO("mysql:host=$hostname;dbname=$database", $username, $password);
+    $_DB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Connection failed: " . $e->getMessage());
+}
+
+$search = $_POST['search']['value'] ?? '';
+$start = isset($_POST['start']) ? (int)$_POST['start'] : 0;
+$length = isset($_POST['length']) ? (int)$_POST['length'] : 25;
+
+// Запрос на получение данных с учетом пагинации
+$query = "SELECT * FROM `products` WHERE `name` LIKE :search LIMIT :start, :length";
+$stmt = $_DB->prepare($query);
+$stmt->bindValue(':search', "%$search%", PDO::PARAM_STR);
+$stmt->bindValue(':start', $start, PDO::PARAM_INT);
+$stmt->bindValue(':length', $length, PDO::PARAM_INT);
+$stmt->execute();
+$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Запрос на получение общего количества записей (без учета пагинации)
+$countQuery = "SELECT COUNT(*) as count FROM `products` WHERE `name` LIKE :search";
+$stmt = $_DB->prepare($countQuery);
+$stmt->bindValue(':search', "%$search%", PDO::PARAM_STR);
+$stmt->execute();
+$totalRecords = $stmt->fetch(PDO::FETCH_ASSOC)['count'];
+
+$response = [
+    'draw' => isset($_POST['draw']) ? intval($_POST['draw']) : 0,
+    'recordsTotal' => $totalRecords, // Общее количество записей в вашей базе данных (без учета фильтрации)
+    'recordsFiltered' => $totalRecords, // Общее количество записей после применения фильтра (если есть)
+    'data' => $data // Данные для отображения
+];
+
+echo (json_encode($response));
